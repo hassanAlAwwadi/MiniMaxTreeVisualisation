@@ -1,0 +1,31 @@
+﻿<Window x:Class="MiniMaxTreeVisualisation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniMaxTreeVisualisation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized" WindowStyle="None"
+        KeyDown="MainWindow_OnKeyDown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Button Margin="10" x:Name="TTTBUTTON" Content="Play Tick Tack Toe" Click="TTTBUTTON_OnClick"/>
+            <Button Margin="10" x:Name="TTTBUTTONAI" Content="Play Tick Tack Toe AI vs AI" Click="TTTBUTTONAI_OnClick"/>
+            <Button Margin="10" x:Name="CFBUTTON" Content="Play Connect Four " Click="CFBUTTON_OnClick"/>
+            <Button Margin="10" x:Name="CFBUTTONAI" Content="Play Connect Four AI vs AI" Click="CFBUTTONAI_OnClick"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Label VerticalAlignment="Center"> Depth:</Label>
+                <TextBox  VerticalAlignment="Center" Text="6" TextChanged="changeDepth"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <Canvas x:Name="g" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>
